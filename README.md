@@ -22,3 +22,15 @@ Most of the user entered data simply had inconsistent abbreviations which I deci
 I kept some the entered data the same like North State Highway 83 and Park Avenue West even though they at first appeared to need cleaning.  The vast majority of problems were fixed by auditing the data and then changing them to the updated names mapping that I continue updating as I saw more and more of my data set.
 
 The sample that I used, being so small, didn't fully prepare me for the errors that existed in the truly OSM file.  After loading that and beginning to clean it, I had to circle back and look at additional problems created like the abbreviations with a '.' at the end.
+
+### Overview of the data
+
+#### Size of the file:     
+'''
+denver-boulder_colorado.osm.....850mb  
+sample.osm....4mb  
+nodes.csv...325mb  
+nodes_tags.csv...11mb  
+ways.csv...26mb  
+ways_tags.csv...108mb  
+way_nodes.csv...62mb'''
