@@ -36,3 +36,134 @@ ways.csv...26mb
 ways_tags.csv...108mb
 way_nodes.csv...62mb
 ```
+#### Number of nodes:
+
+I decided to sum the number of breweries in the Denver area because CO has such a high profile for microbreweries.  It did not disappoint as it appeared 95th on the list of most mentioned node keys
+
+#### nodes:
+```python
+"""select count(*) from nodes;"""
+```
+8757993 
+#### ways:
+```python
+"""select count(*) from ways;"""
+```
+432284 
+
+#### breweries:
+```python
+"""select count(nt.key) from nodes_tags as nt
+            where nt.key = 'brewery';"""
+```
+85
+
+#### node_keys:
+```python
+"""select nt.key, count(nt.key) from nodes_tags as nt
+            group by nt.key order by count(nt.key) desc limit 100;"""
+```
+#### List of node_keys by frequency:
+```python
+[(u'natural', 50249),
+ (u'highway', 46458),
+ (u'source', 37580),
+ (u'name', 21163),
+ (u'power', 15389),
+ (u'crossing', 12797),
+ (u'amenity', 11326),
+ (u'street', 7469),
+ (u'housenumber', 7448),
+ (u'postcode', 6798),
+ (u'city', 5981),
+ (u'ele', 5702),
+ (u'feature_id', 5252),
+ (u'created', 4794),
+ (u'state', 4545),
+ (u'shop', 3846),
+ (u'barrier', 3177),
+ (u'noexit', 2863),
+ (u'bicycle', 2697),
+ (u'county_id', 2652),
+ (u'state_id', 2652),
+ (u'landuse', 2586),
+ (u'county_name', 2568),
+ (u'local_ref', 2493),
+ (u'phone', 2238),
+ (u'website', 2238),
+ (u'feature_type', 2143),
+ (u'cuisine', 1677),
+ (u'tourism', 1510),
+ (u'railway', 1487),
+ (u'operator', 1183),
+ (u'leisure', 1182),
+ (u'note', 1075),
+ (u'traffic_calming', 959),
+ (u'alt_name', 899),
+ (u'emergency', 897),
+ (u'office', 872),
+ (u'opening_hours', 838),
+ (u'ref', 800),
+ (u'entrance', 793),
+ (u'import_uuid', 785),
+ (u'capacity', 735),
+ (u'man_made', 670),
+ (u'bicycle_parking', 624),
+ (u'religion', 601),
+ (u'access', 574),
+ (u'unit', 559),
+ (u'type', 507),
+ (u'supervised', 480),
+ (u'tmp', 457),
+ (u'place', 450),
+ (u'id', 368),
+ (u'gnis:County_num', 360),
+ (u'gnis:ST_alpha', 360),
+ (u'gnis:ST_num', 360),
+ (u'shelter', 360),
+ (u'waterway', 360),
+ (u'gnis:Class', 359),
+ (u'gnis:County', 359),
+ (u'is_in', 355),
+ (u'covered', 334),
+ (u'denomination', 331),
+ (u'designation', 311),
+ (u'direction', 311),
+ (u'bench', 310),
+ (u'design', 265),
+ (u'aeroway', 257),
+ (u'sport', 241),
+ (u'building', 213),
+ (u'floor', 208),
+ (u'parking', 192),
+ (u'information', 189),
+ (u'craft', 186),
+ (u'country', 175),
+ (u'edited', 173),
+ (u'atm', 165),
+ (u'stop_id', 158),
+ (u'historic', 154),
+ (u'housename', 142),
+ (u'brand', 133),
+ (u'wheelchair', 130),
+ (u'description', 123),
+ (u'material', 122),
+ (u'backrest', 121),
+ (u'lamp_type', 113),
+ (u'park_ride', 110),
+ (u'fee', 102),
+ (u'motor_vehicle', 100),
+ (u'population', 99),
+ (u'traffic_signals', 99),
+ (u'internet_access', 92),
+ (u'foot', 88),
+ (u'support', 88),
+ (u'source_ref', 86),
+ (u'brewery', 85),
+ (u'leaf_type', 85),
+ (u'old_name', 83),
+ (u'smoking', 83),
+ (u'takeaway', 81),
+ (u'shelter_type', 73)]
+ ```
+
