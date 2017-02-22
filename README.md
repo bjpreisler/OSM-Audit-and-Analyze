@@ -166,4 +166,73 @@ I decided to sum the number of breweries in the Denver area because CO has such 
  (u'takeaway', 81),
  (u'shelter_type', 73)]
  ```
+#### Additional query:
+I wanted to see if there were certain users who went after finding breweries, and it appears there are!
+```python
+beer_finders = """select n.user, count(distinct n.id) from nodes_tags as nt
+        join nodes as n on n.id = nt.id
+        where nt.key = 'brewery'
+        group by n.user
+        order by count(n.id) desc;"""
+```
+```python
+[(u'ColoMapper', 70),  
+ (u'chachafish', 10),  
+ (u'Your Village Maps', 2),  
+ (u'Spanholz', 1),  
+ (u'mattchn', 1)]
+ ```
+ ### Additional Ideas:
+
+My hunch was that certain areas of Denver would be more inclined to add data to OSM due to topography, culture, income, etc so I went ahead and split up the number of data points into the 4 different quadrants of the city to see if there was an even or uneven spread
+
+```python
+QUERY = """SELECT n.lat, n.lon from nodes as n"""
+q2 = """select nt.value, count(*) from nodes_tags as nt
+        group by nt.value
+        order by count(*) desc"""
+
+hp = 39.75             # Meaning horizontal point of city
+vp = -105.010845       # Meaning vertical point of city
+
+q1 = 0 # different quadrants of city
+q2 = 0
+q3 = 0
+q4 = 0
+
+print len(rows)
+for row in rows:
+    try:
+        lat = float(row[0].strip())
+    except:
+        continue
+    try:
+        lon = float(row[1])
+    except:
+        continue
+    if lat > hp:
+        if lon < vp:
+            q1 += 1
+        else:
+            q2 += 1
+    elif lat < hp:
+        if lon < vp:
+            q4 += 1
+        else:
+            q3 += 1
+        
+print q1, q2, q3, q4
+```
+8757993
+3074419 1234075 2526140 1399067
+
+I am not surprised that Quadrant 1 has the most due to its very active downtown area and that Quadrant 2 does not have many due to its much lower population and greater greenspace
+
+### Conclusion:
+
+The data was cleaner than I expected coming from user generated input.  What took a little bit of time to contort was the string inputted lat and lons into usable integers for analysis.
+
+I would like to do further work concerning other areas of the state seeing as Colorado is such a high percentage of leisure users especially in the mountains.  Do these users take time to add data to OSM or do users tend to just do so when they are near their home areas?
+
+
 
