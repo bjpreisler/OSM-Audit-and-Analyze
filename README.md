@@ -223,11 +223,11 @@ for row in rows:
         
 print q1, q2, q3, q4
 ```
-length of rows: 8757993
-Quadrant 1:3074419 
-Quadrant 2:1234075 
-Quadrant 3:2526140 
-Quadrant 4:1399067
+length of rows: 8757993  
+Quadrant 1:3074419  
+Quadrant 2:1234075  
+Quadrant 3:2526140  
+Quadrant 4:1399067  
 
 I am not surprised that Quadrant 1 has the most due to its very active downtown area and that Quadrant 2 does not have many due to its much lower population and greater greenspace
 
