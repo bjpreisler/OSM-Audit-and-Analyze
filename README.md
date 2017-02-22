@@ -26,7 +26,8 @@ The sample that I used, being so small, didn't fully prepare me for the errors t
 ### Overview of the data
 
 #### Size of the file:     
-'''
+
+'''python
 denver-boulder_colorado.osm.....850mb  
 sample.osm....4mb  
 nodes.csv...325mb  
