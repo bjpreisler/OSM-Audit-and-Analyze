@@ -28,11 +28,11 @@ The sample that I used, being so small, didn't fully prepare me for the errors t
 #### Size of the file:     
 
 ```python
-denver-boulder_colorado.osm.....850mb  
-sample.osm....4mb  
-nodes.csv...325mb  
-nodes_tags.csv...11mb  
-ways.csv...26mb  
-ways_tags.csv...108mb  
+denver-boulder_colorado.osm.....850mb
+sample.osm....4mb
+nodes.csv...325mb
+nodes_tags.csv...11mb
+ways.csv...26mb
+ways_tags.csv...108mb
 way_nodes.csv...62mb
 ```
