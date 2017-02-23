@@ -1,0 +1,4 @@
+Resources used for Data Wrangling Project:
+-Udacity quizzes for example code
+-Udacity forums for common problems (specifically Myles' answers!)
+-stackoverflow for assistance with 'try' statements
