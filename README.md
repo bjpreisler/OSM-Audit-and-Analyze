@@ -188,8 +188,8 @@ beer_finders = """select n.user, count(distinct n.id) from nodes_tags as nt
  (u'Spanholz', 1),  
  (u'mattchn', 1)]
  ```
- ### Additional Ideas:
-
+ 
+#### Additional Ideas:
 My hunch was that certain areas of Denver would be more inclined to add data to OSM due to topography, culture, income, etc so I went ahead and split up the number of data points into the 4 different quadrants of the city to see if there was an even or uneven spread
 
 ```python
@@ -243,5 +243,6 @@ The data was cleaner than I expected coming from user generated input.  What too
 
 I would like to do further work concerning other areas of the state seeing as Colorado is such a high percentage of leisure users especially in the mountains.  Do these users take time to add data to OSM or do users tend to just do so when they are near their home areas?
 
+My guess would be that users are actually more likely to do so when viewing a highly attractive place like Red Rocks Amphitheatre or Vail Ski Area.  The complications would obviously be having to use a much larger dataset which can really slow down the system.  Just auditing and analyzing Denver was quite cumbersome.  An additional complication would be not knowing if the OSM user was a visitor or local at the attraction.  Without knowing this, we obviously couldn't do much analysis on whether or not more people add OSM data near home or when traveling.  
 
 
