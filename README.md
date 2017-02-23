@@ -51,6 +51,12 @@ I decided to sum the number of breweries in the Denver area because CO has such 
 ```
 432284 
 
+#### users:
+```python
+SELECT COUNT(DISTINCT(b.uid))          
+FROM (SELECT uid FROM nodes UNION ALL SELECT uid FROM ways) as b;
+```
+
 #### breweries:
 ```python
 """select count(nt.key) from nodes_tags as nt
