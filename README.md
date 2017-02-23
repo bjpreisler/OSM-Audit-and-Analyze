@@ -57,6 +57,7 @@ I decided to sum the number of breweries in the Denver area because CO has such 
 SELECT COUNT(DISTINCT(b.uid))          
 FROM (SELECT uid FROM nodes UNION ALL SELECT uid FROM ways) as b;
 ```
+2050
 
 #### breweries:
 ```python
