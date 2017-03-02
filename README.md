@@ -24,6 +24,8 @@ I kept some the entered data the same like North State Highway 83 and Park Avenu
 
 The sample that I used, being so small, didn't fully prepare me for the errors that existed in the truly OSM file.  After loading that and beginning to clean it, I had to circle back and look at additional problems created like the abbreviations with a '.' at the end.
 
+Phone numbers also presented additional problems with their combination of domestic and international formats.  To deal with this issue I matched against a regex that return the 10 digit format [(xxx) xxx-xxxx] that is more conventional.
+
 ### Overview of the data
 
 #### Size of the file:     
